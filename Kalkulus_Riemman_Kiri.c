@@ -89,12 +89,12 @@ int main(){
            
             tanda[i] = (pilihan_Tanda == '+') ? 1 : -1;
             
-            printf("Coefficient of x^%d: ", i);
+            printf("koefesien dari x^%d: ", i);
             scanf("%lf", &koefisien[i]);
             
          
             if (i > 0) {
-                printf("Sign for next term (+ or -): ");
+                printf("Standan untuk suku berikutnya (+ or -): ");
                 scanf(" %c", &pilihan_Tanda);
             }
         }
