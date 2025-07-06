@@ -56,7 +56,7 @@ int main(){
   }
 
 
-  printf("Enter the degree of the polynomial: ");
+  printf("derajat polinomial: ");
     scanf("%d", &pangkat);
     
     
@@ -68,29 +68,29 @@ int main(){
         return 1;
     }
     
-    // Get coefficients and signs
-    printf("Enter the coefficients and signs from highest to lowest degree:\n");
+    
+    printf("Masukkan koefisien dan tanda dari derajat tertinggi ke terendah:\n");
     for (int i = pangkat; i >= 0; i--) {
         if (i == pangkat) {
-            printf("Coefficient of x^%d: ", i);
+            printf("koefisien dari x^%d: ", i);
             scanf("%lf", &koefisien[i]);
             
-            // For highest degree term, ask for sign only if it's not the only term
+            
             if (pangkat > 0) {
-                printf("Sign for next term (+ or -): ");
+                printf("tanda untuk berikutnya (+ or -): ");
                 scanf(" %c", &pilihan_Tanda);
-                tanda[i] = 1; // Highest degree term is always positive in this display
+                tanda[i] = 1; 
             } else {
                 tanda[i] = 1;
             }
         } else {
-            // The sign for this term was selected in the previous iteration
+           
             tanda[i] = (pilihan_Tanda == '+') ? 1 : -1;
             
             printf("Coefficient of x^%d: ", i);
             scanf("%lf", &koefisien[i]);
             
-            // Get sign for next term if not the last term
+         
             if (i > 0) {
                 printf("Sign for next term (+ or -): ");
                 scanf(" %c", &pilihan_Tanda);
