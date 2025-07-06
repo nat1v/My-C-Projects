@@ -6,6 +6,7 @@ int pangkat;
 int *tanda; //tanda minus atau plus
 double *koefisien;
 
+//Menghitung nilai f(x) pada x_i
 double integrate(double x_input){
   
   double hasil_fungsi = 0;
@@ -19,6 +20,7 @@ double integrate(double x_input){
   return hasil_fungsi;
 }
 
+//menghitung sigma dari riemman kiri
 double riemann_kiri(double a, double b, int n, double (*sebuah_fungsi)(double)){
   
   double delta_x = (b-a)/n;
