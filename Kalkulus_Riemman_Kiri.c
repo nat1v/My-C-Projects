@@ -44,13 +44,15 @@ int main(){
   char pilihan_Tanda;
 
 
-
+  printf("masukkan batas atas: ");
   if (scanf("%lf", &batas_atas) != 1){
       printf("invalid input untuk batas atas.");
   }
+    printf("masukkan batas bawah: ");
   if (scanf("%lf", &batas_bawah) != 1){
       printf("invalid input untuk batas bawah");
   }
+      printf("masukkan partisi: ");  
   if (scanf("%d", &poinInterval) != 1 || poinInterval <= 0){
       printf("imvalid, harus positif (x > 0)");
   }
